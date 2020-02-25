@@ -19,6 +19,8 @@ creating the gameboard, and performing all accesses to the gameboard.
 */
 
 #include <pair>
+#include <list>
+#include <memory>
 
 using namespace std;
 
@@ -29,6 +31,7 @@ class World {
     shared_ptr<pair<int, int>> getStartPos();
     shared_ptr<pair<int, int>> getGoalPos();
     int evaluatePos(int x, int y);
+    void printGameboard(shared_ptr<list<pair<int, int>>> navPath);
   private:
     unique_ptr<array<int>> gameboard;
     unique_prt<array<int>> buildGameBoard(string filePath);
