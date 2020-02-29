@@ -8,7 +8,7 @@ kling109@mail.chapman.edu
 
 CPSC 390: Artificial Intelligence
 
-Last Updated: 02/29/2020
+Last Updated: 02/30/2020
 
 ## Introduction
 
@@ -21,3 +21,5 @@ To run, first compile the program using the `make` command.  Then, run the resul
 ## Known Issues
 
 None.
+
+Tested on WSL Ubuntu and a native 18.03 Ubuntu Distrobution.
