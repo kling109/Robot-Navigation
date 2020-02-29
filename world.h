@@ -10,7 +10,7 @@ Author: Trevor Kling
 Email: kling109@mail.chapman.edu
 Course: CPSC 390 Artificial Intelligence
 Student ID: 002270716
-Last Date Modified: 02/18/2020
+Last Date Modified: 02/26/2020
 *******************************************************************************/
 
 /*
@@ -18,21 +18,29 @@ Gameboard class for robot navigation.  This class handles reading in the file,
 creating the gameboard, and performing all accesses to the gameboard.
 */
 
-#include <pair>
+#include <utility>
 #include <list>
 #include <memory>
+#include <map>
+#include <fstream>
+#include <iostream>
 
 using namespace std;
 
-class World {
+class World
+{
   public:
     World(string filePath);
     ~World();
-    shared_ptr<pair<int, int>> getStartPos();
-    shared_ptr<pair<int, int>> getGoalPos();
+    pair<int, int> getStartPos();
+    pair<int, int> getGoalPos();
+    int getGameBoardSize();
     int evaluatePos(int x, int y);
-    void printGameboard(shared_ptr<list<pair<int, int>>> navPath);
+    void printGameboard(list<pair<int, int>> *navPath);
   private:
-    unique_ptr<array<int>> gameboard;
-    unique_prt<array<int>> buildGameBoard(string filePath);
+    int** gameboard;
+    int gameboardSize;
+    pair<int, int> *startPos;
+    pair<int, int> *goalPos;
+    void buildGameBoard(string filePath);
 };
