@@ -8,7 +8,7 @@ kling109@mail.chapman.edu
 
 CPSC 390: Artificial Intelligence
 
-Last Updated: 02/25/2020
+Last Updated: 02/29/2020
 
 ## Introduction
 
